@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BreadcrumbDescription.hpp" />
+    <ClInclude Include="Breadcrumber.hpp" />
+    <ClInclude Include="NeuralProcessDescription.hpp" />
+    <ClInclude Include="Cuda.hpp" />
+    <ClInclude Include="DatasetDescription.hpp" />
+    <ClInclude Include="Dictionary.hpp" />
+    <ClInclude Include="Edge.hpp" />
+    <ClInclude Include="NotifyPropertyChanged.hpp" />
+    <ClInclude Include="PrimitiveDictionary.hpp" />
+    <ClInclude Include="Segmenter.hpp" />
+    <ClInclude Include="SegmenterImageStackLoader.hpp" />
+    <ClInclude Include="Thrust.hpp" />
+    <ClInclude Include="VolumeDescription.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BreadcrumbDescription.cpp" />
+    <ClCompile Include="Breadcrumber.cpp" />
+    <ClCompile Include="Dictionary.cpp" />
+    <ClCompile Include="NeuralProcessDescription.cpp" />
+    <ClCompile Include="Cuda.cpp" />
+    <ClCompile Include="DatasetDescription.cpp" />
+    <ClCompile Include="NotifyPropertyChanged.cpp" />
+    <ClCompile Include="PrimitiveDictionary.cpp" />
+    <ClCompile Include="Segmenter.cpp" />
+    <ClCompile Include="SegmenterImageStackLoader.cpp" />
+    <ClCompile Include="Thrust.cpp" />
+    <ClCompile Include="VolumeDescription.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Mojo.Cgal\Mojo.Cgal.vcxproj">
+      <Project>{9fc3bb11-e4ff-4f9b-a499-af47cde34452}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Mojo.Core\Mojo.Core.vcxproj">
+      <Project>{cc8440eb-75bf-400b-b29a-df5b961efce0}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Mojo.Cuda\Mojo.Cuda.vcxproj">
+      <Project>{eb624a2e-6fcd-4885-b55b-4feceb582514}</Project>
+      <Private>true</Private>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\Mojo.Native\Mojo.Native.vcxproj">
+      <Project>{8dd92da7-f3ee-4334-afa2-3cbf59d6518a}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4C96C16D-82B7-43BD-829F-650407B660D7}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Mojo.Interop</RootNamespace>
+    <ProjectName>Mojo.Interop</ProjectName>
+    <CudaToolkitCustomDir>..\Sdk\Cuda\v3.2</CudaToolkitCustomDir>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>NotSet</CharacterSet>
+    <PlatformToolset>v90</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>NotSet</CharacterSet>
+    <PlatformToolset>v90</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 3.2.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IntDir>obj\$(PlatformName)\$(Configuration)\</IntDir>
+    <OutDir>bin\$(PlatformName)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IntDir>obj\$(PlatformName)\$(Configuration)\</IntDir>
+    <OutDir>bin\$(PlatformName)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAsManaged>true</CompileAsManaged>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MinimalRebuild>false</MinimalRebuild>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <AdditionalIncludeDirectories>..\;..\Sdk\OpenCV\OpenCV2.2\include\;..\Sdk\Thrust\thrust-v1.3.0\;..\Sdk\Cutil\NVIDIA GPU Computing SDK 3.2\C\common\inc\;..\Sdk\Cuda\v3.2\include\;..\Sdk\Boost\boost_1_44\;..\Sdk\DirectX\Microsoft DirectX SDK (June 2010)\Include\</AdditionalIncludeDirectories>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <AdditionalUsingDirectories>..\Sdk\SlimDX\SlimDX SDK (October 2010)\Bin\net20\x86\;..\Sdk\ObservableDictionary\v1.0\bin\Release\</AdditionalUsingDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\Mojo.Cuda\obj\$(PlatformName)\$(Configuration)\;..\Sdk\OpenCV\OpenCV2.2\lib\;..\Sdk\Cuda\v3.2\lib\Win32\;..\Sdk\Boost\boost_1_44\lib\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>ConstraintMap.obj;Debug.obj;EdgeXYMap.obj;EdgeZMap.obj;Initialize.obj;CostMap.obj;PrimalDualSolver2D.obj;PrimalDualSolver3D.obj;CommittedSegmentation.obj;opencv_highgui220d.lib;opencv_imgproc220d.lib;opencv_core220d.lib;cudart.lib;cuda.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Lib>
+      <OutputFile>$(ProjectDir)bin\$(PlatformShortName)\$(Configuration)\$(TargetName)$(TargetExt)</OutputFile>
+    </Lib>
+    <CudaCompile>
+      <PtxAsOptionV>true</PtxAsOptionV>
+      <Include>..\;..\Sdk\Thrust\thrust-v1.3.0\;..\Sdk\Cutil\NVIDIA GPU Computing SDK 3.2\C\common\inc\;..\Sdk\DirectX\Microsoft DirectX SDK (June 2010)\Include\;..\Sdk\Boost\boost_1_44\;c:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\include;c:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\atlmfc\include;C:\Program Files\Microsoft SDKs\Windows\v6.0A\include</Include>
+      <GPUDebugInfo>true</GPUDebugInfo>
+      <Defines>_DEBUG</Defines>
+      <CodeGeneration>compute_20,sm_20</CodeGeneration>
+      <FastMath>true</FastMath>
+    </CudaCompile>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAsManaged>true</CompileAsManaged>
+      <MinimalRebuild>false</MinimalRebuild>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <AdditionalIncludeDirectories>..\;..\Sdk\OpenCV\OpenCV2.2\include\;..\Sdk\Thrust\thrust-v1.3.0\;..\Sdk\Cutil\NVIDIA GPU Computing SDK 3.2\C\common\inc\;..\Sdk\Cuda\v3.2\include\;..\Sdk\Boost\boost_1_44\;..\Sdk\DirectX\Microsoft DirectX SDK (June 2010)\Include\</AdditionalIncludeDirectories>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <AdditionalUsingDirectories>..\Sdk\SlimDX\SlimDX SDK (October 2010)\Bin\net20\x86\;..\Sdk\ObservableDictionary\v1.0\bin\Release\</AdditionalUsingDirectories>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>..\Mojo.Cuda\obj\$(PlatformName)\$(Configuration)\;..\Sdk\OpenCV\OpenCV2.2\lib\;..\Sdk\Cuda\v3.2\lib\Win32\;..\Sdk\Boost\boost_1_44\lib\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>ConstraintMap.obj;Debug.obj;EdgeXYMap.obj;EdgeZMap.obj;Initialize.obj;CostMap.obj;PrimalDualSolver2D.obj;PrimalDualSolver3D.obj;CommittedSegmentation.obj;opencv_highgui220.lib;opencv_imgproc220.lib;opencv_core220.lib;cudart.lib;cuda.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Lib>
+      <OutputFile>$(ProjectDir)bin\$(PlatformShortName)\$(Configuration)\$(TargetName)$(TargetExt)</OutputFile>
+    </Lib>
+    <CudaCompile>
+      <PtxAsOptionV>true</PtxAsOptionV>
+      <Runtime>MD</Runtime>
+      <Include>..\;..\Sdk\Thrust\thrust-v1.3.0\;..\Sdk\Cutil\NVIDIA GPU Computing SDK 3.2\C\common\inc\;..\Sdk\DirectX\Microsoft DirectX SDK (June 2010)\Include\;..\Sdk\Boost\boost_1_44\</Include>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <CodeGeneration>compute_20,sm_20</CodeGeneration>
+      <FastMath>true</FastMath>
+    </CudaCompile>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 3.2.targets" />
+  </ImportGroup>
+</Project>

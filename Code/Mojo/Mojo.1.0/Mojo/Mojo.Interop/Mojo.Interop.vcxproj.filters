@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="Cuda.hpp" />
+    <ClInclude Include="PrimitiveDictionary.hpp" />
+    <ClInclude Include="Segmenter.hpp" />
+    <ClInclude Include="VolumeDescription.hpp" />
+    <ClInclude Include="Breadcrumber.hpp" />
+    <ClInclude Include="BreadcrumbDescription.hpp" />
+    <ClInclude Include="Dictionary.hpp" />
+    <ClInclude Include="DatasetDescription.hpp" />
+    <ClInclude Include="Edge.hpp" />
+    <ClInclude Include="NeuralProcessDescription.hpp" />
+    <ClInclude Include="NotifyPropertyChanged.hpp" />
+    <ClInclude Include="Thrust.hpp" />
+    <ClInclude Include="SegmenterImageStackLoader.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Cuda.cpp" />
+    <ClCompile Include="Segmenter.cpp" />
+    <ClCompile Include="VolumeDescription.cpp" />
+    <ClCompile Include="PrimitiveDictionary.cpp" />
+    <ClCompile Include="Breadcrumber.cpp" />
+    <ClCompile Include="BreadcrumbDescription.cpp" />
+    <ClCompile Include="DatasetDescription.cpp" />
+    <ClCompile Include="NeuralProcessDescription.cpp" />
+    <ClCompile Include="NotifyPropertyChanged.cpp" />
+    <ClCompile Include="Thrust.cpp" />
+    <ClCompile Include="SegmenterImageStackLoader.cpp" />
+    <ClCompile Include="Dictionary.cpp" />
+  </ItemGroup>
+</Project>

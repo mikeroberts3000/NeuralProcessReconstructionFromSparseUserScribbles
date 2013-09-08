@@ -1,0 +1,39 @@
+﻿<Window x:Class="Mojo.Wpf.LoadDatasetDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:properties="clr-namespace:Mojo.Wpf"
+        Title="Load Dataset" MinHeight="208" MinWidth="1283" MaxHeight="208" MaxWidth="1283" WindowStartupLocation="CenterScreen" >
+    
+    <Window.Resources>
+        <properties:Settings x:Key="Settings" />
+    </Window.Resources>
+    
+    <Grid Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="5"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="231"></ColumnDefinition>
+            <ColumnDefinition Width="1030"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="1" Grid.ColumnSpan="2" Margin="0,0,11,0" Content="Source Images Directory:"/>
+        <Label Grid.Row="2" Grid.ColumnSpan="2" Margin="0,0,11,0" Content="Filtered Images Directory:"/>
+        <Label Grid.Row="3" Grid.ColumnSpan="2" Margin="0,0,11,0" Content="Optical Flow Forward Images Directory:"/>
+        <Label Grid.Row="4" Grid.ColumnSpan="2" Margin="0,0,11,0" Content="Optical Flow Backward Images Directory:"/>
+
+        <TextBox Name="SourceImages"              Grid.Row="1" Grid.Column="1" Text="{Binding Source={StaticResource Settings}, Path=Default.SourceImages}"/>
+        <TextBox Name="FilteredImages"            Grid.Row="2" Grid.Column="1" Text="{Binding Source={StaticResource Settings}, Path=Default.FilteredImages}"/>
+        <TextBox Name="OpticalFlowForwardImages"  Grid.Row="3" Grid.Column="1" Text="{Binding Source={StaticResource Settings}, Path=Default.OpticalFlowForwardImages}"/>
+        <TextBox Name="OpticalFlowBackwardImages" Grid.Row="4" Grid.Column="1" Text="{Binding Source={StaticResource Settings}, Path=Default.OpticalFlowBackwardImages}"/>
+
+        <Button Name="Ok" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="90" Click="OkClick">OK</Button>        
+    </Grid>
+</Window>

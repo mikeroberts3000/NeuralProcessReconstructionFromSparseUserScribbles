@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="layout">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="tile">
+          <xs:complexType>
+            <xs:attribute name="filename" type="xs:string" use="required" />
+            <xs:attribute name="x" type="xs:unsignedByte" use="required" />
+            <xs:attribute name="y" type="xs:unsignedByte" use="required" />
+            <xs:attribute name="width" type="xs:unsignedShort" use="required" />
+            <xs:attribute name="height" type="xs:unsignedShort" use="required" />
+            <xs:attribute name="m00" type="xs:decimal" use="required" />
+            <xs:attribute name="m10" type="xs:decimal" use="required" />
+            <xs:attribute name="m01" type="xs:decimal" use="required" />
+            <xs:attribute name="m11" type="xs:decimal" use="required" />
+            <xs:attribute name="m02" type="xs:decimal" use="required" />
+            <xs:attribute name="m12" type="xs:decimal" use="required" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="mag" type="xs:unsignedByte" use="required" />
+      <xs:attribute name="width" type="xs:unsignedShort" use="required" />
+      <xs:attribute name="height" type="xs:unsignedShort" use="required" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
