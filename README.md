@@ -41,6 +41,6 @@ I have taken care to include all external compile-time dependencies in the SDK z
 ### Notes
 
 * The video on the <a href='http://graphics.stanford.edu/~mlrobert/publications/miccai_2011/'>project page</a> offers rough guidance on the intended usage of the application.
-* Additional documentation (i.e., papers, posters, etc) is available <a href='http://graphics.stanford.edu/~mlrobert/github/NeuralProcessReconstructionFromSparseUserScribbles/Documentation.zip'>here</a>.
+* Additional documentation is available <a href='http://graphics.stanford.edu/~mlrobert/github/NeuralProcessReconstructionFromSparseUserScribbles/Documentation.zip'>here</a>.
 
 [![githalytics.com alpha](https://cruel-carlota.pagodabox.com/80b5bf23a6fe86d5c2c06bd1f69b2e27 "githalytics.com")](http://githalytics.com/mroberts3000/NeuralProcessReconstructionFromSparseUserScribbles)
