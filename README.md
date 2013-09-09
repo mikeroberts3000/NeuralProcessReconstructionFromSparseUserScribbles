@@ -20,7 +20,7 @@ This repository contains a C#/C++/CUDA implementation of our paper <a href='http
 * <a href='https://developer.nvidia.com/cuda-gpus'>CUDA-Enabled GPU</a> that also supports Direct3D 11
 * <a href='https://developer.nvidia.com/cuda-downloads'>CUDA drivers</a>
 * <a href='http://www.microsoft.com/en-us/download/details.aspx?id=8109'>DirectX End-User Runtimes (June 2010)</a>
-* <a href='http://graphics.stanford.edu/~mlrobert/github/NeuralProcessReconstructionFromSparseUserScribbles/sdk.zip'>SDK zip file</a>
+* <a href='http://graphics.stanford.edu/~mlrobert/github/NeuralProcessReconstructionFromSparseUserScribbles/Sdk.zip'>SDK zip file</a>
 
 ### Precompiled Binaries
 
