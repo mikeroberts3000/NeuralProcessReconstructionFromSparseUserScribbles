@@ -1,6 +1,7 @@
 <p align="center">
   <strong><a href='http://graphics.stanford.edu/~mlrobert/publications/miccai_2011/'>Neural Process Reconstruction from Sparse User Scribbles</a></strong><br>
-  Mike Roberts, Won-Ki Jeong, Amelio Vazquez-Reina, Markus Unger, Horst Bischof, Jeff Lichtman, Hanspeter Pfister<br>
+  Mike Roberts, Won-Ki Jeong, Amelio Vazquez-Reina, Markus Unger<br>
+  Horst Bischof, Jeff Lichtman, Hanspeter Pfister<br>
   <em>Medical Image Computing and Computer Assisted Intervention (MICCAI) 2011</em>
 </p>
 
