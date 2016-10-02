@@ -7,11 +7,7 @@
 
 <a href='http://graphics.stanford.edu/papers/neural_process/'>![Alt text](/Documentation/Figures/overview-row.png)</a>
 
-<p align="center">
-  <b>The source code and precompiled binaries available here are provided for non-commercial research purposes only.<b><br><br>
-</p>
-
-This repository contains a C#/C++/CUDA implementation of our paper <a href='http://graphics.stanford.edu/papers/neural_process/'>Neural Process Reconstruction from Sparse User Scribbles</a>.
+This repository contains a C#/C++/CUDA implementation of our paper <a href='http://graphics.stanford.edu/papers/neural_process/'>Neural Process Reconstruction from Sparse User Scribbles</a>. The source code and precompiled binaries available here are provided for non-commercial research purposes only.
 
 ### Requirements
 
