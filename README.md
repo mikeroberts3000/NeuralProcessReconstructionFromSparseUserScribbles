@@ -25,9 +25,9 @@ Precompiled binaries are available <a href='http://graphics.stanford.edu/papers/
 ### Build Instructions
 
 * Unzip the SDK zip file into the code folder such that the Sdk folder is parallel to the Mojo.Wpf folder.
-* Open Code\Code\Mojo\Mojo.1.0\Mojo\Mojo.Wpf.sln in Visual Studio 2010.
+* Open Code\Mojo\Mojo.Wpf.sln in Visual Studio 2010.
 * Set the Mojo.Wpf project to be the startup project.
-* Set the Mojo.Wpf project's working directory to be the full path of the Code\Code\Mojo\Mojo.1.0\Mojo\Bin folder.
+* Set the Mojo.Wpf project's working directory to be the full path of the Code\Mojo\Bin folder.
 * Set the platform to be x86.
 * Select Build Solution from the Build menu.
 * Now you can run and debug the application.
